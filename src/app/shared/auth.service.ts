@@ -11,6 +11,10 @@ export class AuthService {
 
   constructor(private router: Router) { }
 
+  isLoggedIn() {
+    return this._isAuthenticated.value;
+  }
+
   loginSuccess() {
     this._isAuthenticated.next(true);
   }
